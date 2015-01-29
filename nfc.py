@@ -30,7 +30,7 @@ def readNfc():
 
         (status,backData) = MIFAREReader.MFRC522_Anticoll()
         if status == MIFAREReader.MI_OK:
-            #print ("Cislo karty: "+str(backData[0])+","+str(backData[1])+","+str(backData[2])+","+str(backData[3])+","+str(backData[4]))
+            #print ("Card Number: "+str(backData[0])+","+str(backData[1])+","+str(backData[2])+","+str(backData[3])+","+str(backData[4]))
             MIFAREReader.AntennaOff()
             reading=False
             return str(backData[0])+str(backData[1])+str(backData[2])+str(backData[3])+str(backData[4])

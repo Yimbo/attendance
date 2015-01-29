@@ -109,13 +109,13 @@ def readNfc(action):
         else:
             display.lcdWriteFirstLine("Delete Event?")
             if(lastAction==Actions.incomming):
-                display.lcdWriteSecondLine("Prichod")
+                display.lcdWriteSecondLine("Check In")
             elif(lastAction==Actions.outcomming):
-                display.lcdWriteSecondLine("Odchod")
+                display.lcdWriteSecondLine("Check Out")
             elif(lastAction==Actions.breakstart):
                 display.lcdWriteSecondLine("Pauza zacatek")
             elif(lastAction==Actions.breakend):
-                display.lcdWriteSecondLine("Pauza konec")
+                display.lcdWriteSecondLine("End of Pause?")
             a=getOneKey()
             if(a==49):#1
                 onScreen("Mazu")
